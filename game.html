@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <style>
+            body {
+                background: #3f6eb3;
+                color: #1f3759;}
+            h1{
+                margin-top:0.5em;
+                background-color: #111111;
+                color: #FFFFFf;
+                text-align: center;
+                font-size: 2.5em;}
+            h2{
+                margin-top: 0.5em;
+                color: #111111;
+                font-size: 1em;}
+            h3{
+                font-family: 'Arial Unicode MS'; 
+                color: #1f3759;
+                font-size: 1.5em;
+                text-align:center;
+                 width: 493px;
+                 margin-left: 417px;
+                 margin-right: 188px;
+             }
+            p {
+                color: #FFFFFF;
+                font-size: 1em;}
+            table{
+                font-family: 'Arial Unicode MS';
+                color: #FFFFFF;
+                background-color: #7dbb00;
+                font-size: 2.5em;
+                text-align: center;
+            }
+            input{
+                font-size:1em;
+            }
+            button{
+                text-align: center;
+                 height: 25px;
+                 width: 57px;
+             }
+            
+        </style>
+    </head>
+    <body>
+    <div>
+        <h1>Cross and Naught Game</h1>
+        <h2>INSTRUCTION:</h2>
+         <P>Choose a number From the Board and Enter it into the Position Box and Click SUBMIT</P>
+         <p>By Default you will get to choose first (i.e X) and the Server will choose its position(i.e O) </p>
+         <h3 align="center">GAME BOARD</h3>
+        <table align="center">
+            <tr>
+                <td class="variable" 
+                    style="border-style: solid; border-top-color: #FFFFFF; border-left-color: #FFFFFF">-1-</td>
+                <td class="variable" style="border-style: solid">-2-</td>
+                <td class="variable" style="border-style: solid">-3-</td>
+            </tr>
+            <tr>
+                <td class="variable" style="border-style: solid">-4-</td>
+                <td class="variable" style="border-style: solid">-5-</td>
+                <td class="variable" style="border-style: solid">-6-</td>
+            </tr>
+            <tr>
+                <td class="variable" style="border-style: solid">-7-</td>
+                <td class="variable" style="border-style: solid">-8-</td>
+                <td class="variable" style="border-style: solid">-9-</td>
+            </tr>
+        </table>
+        <br />
+        <table style="width:47%; margin-top: 0px; font-size: large; height: 48px;" align="center">
+            <tr align="center">
+                <td style="background-color: #7dbb00">Game: Ready</td>
+            </tr>
+        </table>
+        <form action="/tcp-server.py" method = "POST">
+        <h3 align="center"> Position: <input type="text" name="position"></h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <button align:"center" type="Submit" formmethod="POST" formaction="/tcp-server.py">Submit</button>
+        </form>
+        <form action="/tcp-server.py" method = "POST" 
+        style="width: 259px; margin-left: 422px; margin-right: 270px">
+         <input type="hidden" name="position" value="55">
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <button align:"center" formmethod="POST" formaction="/tcp-server.py">Reset</button>
+         </form>
+    </div>
+
+
+    </body>
+</html>
